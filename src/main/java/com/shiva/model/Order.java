@@ -1,5 +1,7 @@
 package com.shiva.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,7 +10,11 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="MQ_ORDERS")
-public class Order {
+public class Order implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8771328656372412296L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer orderId;
